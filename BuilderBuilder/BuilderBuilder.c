@@ -6,7 +6,7 @@
 
 FILE* OpenBuilderOutput(BUILD_PARAMS *params)
 {
-	char filename[_MAX_PATH];
+	char filename[1000];
 	sprintf(filename, "%sBuilder.swift", params->className);
 
 	if (FileExists(filename))
