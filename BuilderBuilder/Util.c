@@ -44,10 +44,9 @@ void StrcpyUntilAny(char *dest, const char *str, const char *control)
 	end = strpbrk(str, control);
 	if (end)
 	{
-		while (str != end)
-			*dest++ = *str++;
-
-		*dest = '\0';
+		int size = end - str;
+		strncpy(dest, str, size);
+		dest[size] = '\0';
 	}
 	else
 	{
