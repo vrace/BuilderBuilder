@@ -80,24 +80,6 @@ static INIT_PARAM_LIST* InitParamListFromLine(char *line)
 	return list;
 }
 
-static int ProcessClassDefine(BUILD_PARAMS *params, char *str)
-{
-	static const char *delimiters = " :{,";
-
-	assert(params != NULL);
-	assert(str != NULL);
-
-	str = strstr(str, "class");
-	if (str != NULL)
-	{
-		str = strtok(str + strlen("class"), delimiters);
-		if (str != NULL)
-			strcpy(params->className, str);
-	}
-
-	return str != NULL;
-}
-
 static int PickupClassName(BUILD_PARAMS *params, FILE *fp)
 {
 	char line[4096];
