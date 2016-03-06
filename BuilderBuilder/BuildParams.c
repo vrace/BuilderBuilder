@@ -4,6 +4,7 @@
 #include <assert.h>
 #include "BuildParams.h"
 #include "Util.h"
+#include "PickupClassName.h"
 
 static INIT_PARAM_LIST* InitParamListCreate(void)
 {
@@ -106,7 +107,7 @@ static int PickupClassName(BUILD_PARAMS *params, FILE *fp)
 	assert(fp != NULL);
 
 	while (!found && fgets(line, 4096, fp))
-		found = ProcessClassDefine(params, line);
+		found = PickupClassNameFromLine(params->className, line);
 
 	return found;
 }

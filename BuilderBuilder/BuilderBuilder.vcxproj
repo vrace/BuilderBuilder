@@ -14,11 +14,13 @@
     <ClCompile Include="Builder.c" />
     <ClCompile Include="BuilderBuilder.c" />
     <ClCompile Include="BuildParams.c" />
+    <ClCompile Include="PickupClassName.c" />
     <ClCompile Include="Util.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Builder.h" />
     <ClInclude Include="BuildParams.h" />
+    <ClInclude Include="PickupClassName.h" />
     <ClInclude Include="Util.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

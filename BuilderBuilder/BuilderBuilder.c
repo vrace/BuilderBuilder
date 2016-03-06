@@ -9,6 +9,7 @@ FILE* OpenBuilderOutput(BUILD_PARAMS *params)
 	char filename[1000];
 	sprintf(filename, "%sBuilder.swift", params->className);
 
+#if !_DEBUG
 	if (FileExists(filename))
 	{
 		printf("The file '%s' already exists.\n", filename);
@@ -22,6 +23,9 @@ FILE* OpenBuilderOutput(BUILD_PARAMS *params)
 
 		return fp;
 	}
+#else
+	return fopen(filename, "w");
+#endif
 }
 
 int main(int argc, char *argv[])

@@ -5,10 +5,12 @@
     <ClCompile Include="Util.c" />
     <ClCompile Include="Builder.c" />
     <ClCompile Include="BuildParams.c" />
+    <ClCompile Include="PickupClassName.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Util.h" />
     <ClInclude Include="Builder.h" />
     <ClInclude Include="BuildParams.h" />
+    <ClInclude Include="PickupClassName.h" />
   </ItemGroup>
 </Project>
