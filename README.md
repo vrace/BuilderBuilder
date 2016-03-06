@@ -29,7 +29,7 @@ let something = MyObjectBuilder()
     .build()
 ```
 
-I'm getting tried to write the very similar builders. So I created this tool. This tool will work to generate a Builder template for the class.
+I'm getting tired to write the very similar builders. So I created this tool. This tool will work to generate a Builder template for the class.
 
 An example of generated code:
 
